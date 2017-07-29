@@ -1,11 +1,8 @@
-#!/usr/bin/python3
+#from getFile import getFile
+#import json
+from pprint import pprint
+from sites import iphonecake
 
-from filehosts.dailyuploads import CheckFileIsOnline
+appList = 'https://www.iphonecake.com/app_357828853_.html'
 
-raw_link = input('Please, Enter a link: ')
-
-if raw_link.find('http') == -1:
-    if raw_link.find('https') == -1:
-        print("please try again.")
-else:
-    print(CheckFileIsOnline.check(site=raw_link))
+pprint(iphonecake.getApp(appList).getLinks())
